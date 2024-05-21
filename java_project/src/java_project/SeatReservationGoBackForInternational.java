@@ -590,7 +590,7 @@ public class SeatReservationGoBackForInternational extends JFrame{
      // Koltukların durumunu güncelleyen fonksiyon
     private int[] updateSeatStatus(int flight_id) {
         // Veritabanında ilgili koltuğun durumunu güncelle
-        String updateQuery = "(SELECT seat_number FROM nationalseats WHERE flight_id = " + flight_id + " )";
+        String updateQuery = "(SELECT seat_number FROM internationalseats WHERE flight_id = " + flight_id + " )";
 
         // Sorguyu veritabanında çalıştırın ve sonucu ResultSet nesnesine bağlayın
         ResultSet resultSet = database.baglanti(updateQuery);
